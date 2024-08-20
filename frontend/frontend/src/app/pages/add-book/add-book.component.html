@@ -1,0 +1,21 @@
+<div class="add-book-container">
+  <h2>Cadastrar Livro</h2>
+  <form (ngSubmit)="addBook()">
+    <label for="title">Título:</label>
+    <input id="title" [(ngModel)]="book.title" name="title" required />
+
+    <label for="author">Autor:</label>
+    <input id="author" [(ngModel)]="book.author" name="author" required />
+
+    <label for="year">Ano de Publicação:</label>
+    <input id="year" type="number" [(ngModel)]="book.year" name="year" required />
+
+    <label for="genre">Gênero:</label>
+    <input id="genre" [(ngModel)]="book.genre" name="genre" />
+
+    <label for="synopsis">Sinopse:</label>
+    <textarea id="synopsis" [(ngModel)]="book.synopsis" name="synopsis"></textarea>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+</div>
